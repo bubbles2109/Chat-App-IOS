@@ -6,24 +6,29 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ChangePasswordController: UIViewController {
 
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtNewPassword: UITextField!
+    @IBOutlet weak var txtReNewPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func tapBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        tabBarController?.tabBar.isHidden = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tapOK(_ sender: Any) {
+        Auth.auth().currentUser?.updatePassword(to: txtNewPassword.text!) { (error) in
+          print("cập nhật thành công")
+        
+        }
     }
-    */
-
+    
 }

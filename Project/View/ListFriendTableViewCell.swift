@@ -9,6 +9,9 @@ import UIKit
 
 class ListFriendTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lbFullName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

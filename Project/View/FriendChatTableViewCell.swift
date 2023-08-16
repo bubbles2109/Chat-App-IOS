@@ -9,6 +9,9 @@ import UIKit
 
 class FriendChatTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgAvatar: UIImageView!
+    @IBOutlet weak var lbMessage: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

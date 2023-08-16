@@ -7,8 +7,11 @@
 
 import UIKit
 
-class User1TableViewCell: UITableViewCell {
+class MyChatTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgAvatar: UIImageView!
+    @IBOutlet weak var lbMessage: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
